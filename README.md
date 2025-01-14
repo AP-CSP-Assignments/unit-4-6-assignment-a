@@ -1,4 +1,4 @@
-# unit-4-5-assignment-b
+# unit-4-6-assignment-a
 
 ## To compile code
 All code must be compiled before you can run it.  To compile means that you are converting your C++ code into a language that the computer can understand (e.g., binary).  To compile C++ code, run the following command in a terminal:
@@ -21,11 +21,52 @@ g++ classwork.cpp -o output
 ```
 
 # Instructions
-Do the following in the file named `homework.cpp`.  Your goal for this program is to create sections of code that will perform different outputs with the list called, names which contains the following values - `{"Peter", "Bruce", "Steve", "Tony", "Natasha", "Clint", "Wanda", "Hope", "Danny", "Carol"}` and the list called numbers which contains the following values - `100, 50, 10, 1, 2, 7, 11, 17, 53, -8, -4, -9, -72, -64, -80`. At the beginning of your program, add in any comments and create the two lists. Then create the following:
+Do the following in the file named `homework.cpp`.
+1. Create a procedure named `compare` that takes in two numbers as parameters, and compares them together.  If the first input is larger than the second, then display `"input1 is greater than input2"`.  If the first input is smaller than the second, then display `"input1 is smaller than input2"`.  If they are equal, then display `"the inputs are equal"`.
 
-1. A loop that will output every other name in the names list.
-2. A loop that will output only the positive numbers in the numbers list.
-3. A loop that will output the sum of all the values in the numbers list.
-4. A loop that will output only the numbers that are odd.
-5. A loop that will output only the names that come before "Thor" in the alphabet from the names list.
-6. A loop that will find the maximum or minimum value in the numbers list. This algorithm requires an additional variable that is assigned to the first element in the list. Then, in a loop compare each element to the variable. If the element is > (for max) or < (for min), assign the variable to the element. After the loop, print the variable.
+**Sample Output**
+```
+compare(2, 4)
+2 is less than 4
+
+compare (9, 4)
+9 is greater than 4
+
+compare(3, 3)
+the inputs are equal
+```
+2. Create a procedure named `quadForm` that takes in three numbers as parameters - `a`, `b`, and `c`, and computes the quadratic formula for a quadratic of the form
+
+$$ y = ax^2 + bx + c. $$
+
+Display the two answers in the format shown in the example output.  You may assume that the input `a` will never be 0.  For your reference, the two solutions are given by the following formula
+
+$$ x = \frac{-b\pm\sqrt{b^2-4\cdot a\cdot c}}{(2\cdot a)}. $$
+
+Use the `sqrt()` procedure for the square root.  Note that your program will crash if you get an imaginary number as an answer.
+
+**Sample Outputs**
+```
+quadForm(1, -5, 6)
+The answers are 2.0 and 3.0
+
+quadForm(1, 9, 14)
+The answers are -7.0 and -2.0
+```
+3. Create a procedure named `minList` that takes in a vector of `int` as parameters, and displays the minimum element of the list.  Assume that the list always has at least one element in it.
+
+**Sample Outputs**
+```
+std::vector<int> listA = {1, 2, 3};
+std::vector<int> listB = {3, 2, 1, 0};
+std::vector<int> listC = {-1, -5, -5, -3};
+
+minList(listA)
+The minimum is 1
+
+minList(listB)
+The minimum is 0
+
+minList(listC)
+The minimum is -5
+```
